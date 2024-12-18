@@ -5,7 +5,7 @@ import '../models/item.dart';
 class FamilyMembersPage extends StatelessWidget {
   const FamilyMembersPage({super.key});
 
-  final List<ItemModel> numbers = const [
+  final List<ItemModel> item = const [
     ItemModel(
         image: "assets/images/family_members/family_father.png",
         jpName: "otou San",
@@ -65,11 +65,11 @@ class FamilyMembersPage extends StatelessWidget {
         backgroundColor: const Color(0xff46322B),
       ),
       body: ListView.builder(
-        itemCount: numbers.length,
+        itemCount: item.length,
         itemBuilder: (context, index) {
           return ListItem(
             color: const Color(0xff558B37),
-            number: numbers[index],
+            number: item[index],
           );
         },
       ),
