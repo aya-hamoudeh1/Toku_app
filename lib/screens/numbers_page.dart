@@ -1,13 +1,62 @@
 import 'package:flutter/material.dart';
+import 'package:language_learning_app/components/list_item.dart';
+import '../models/item.dart';
 
 class NumbersPage extends StatelessWidget {
   const NumbersPage({super.key});
 
-  final Number one = const Number(
-    image: "assets/images/numbers/number_one.png",
-    jpName: "ichi",
-    enName: "one",
-  );
+  final List<Number> numbers = const [
+    Number(
+        image: "assets/images/numbers/number_one.png",
+        jpName: "ichi",
+        enName: "One",
+        sound: "sounds/numbers/number_one_sound.mp3"),
+    Number(
+        image: "assets/images/numbers/number_two.png",
+        jpName: "ni",
+        enName: "Two",
+        sound: "sounds/numbers/number_two_sound.mp3"),
+    Number(
+        image: "assets/images/numbers/number_three.png",
+        jpName: "san",
+        enName: "Three",
+        sound: "sounds/numbers/number_three_sound.mp3"),
+    Number(
+        image: "assets/images/numbers/number_four.png",
+        jpName: "yon",
+        enName: "Four",
+        sound: "sounds/numbers/number_four_sound.mp3"),
+    Number(
+        image: "assets/images/numbers/number_five.png",
+        jpName: "go",
+        enName: "Five",
+        sound: "sounds/numbers/number_five_sound.mp3"),
+    Number(
+        image: "assets/images/numbers/number_six.png",
+        jpName: "roku",
+        enName: "Six",
+        sound: "sounds/numbers/number_six_sound.mp3"),
+    Number(
+        image: "assets/images/numbers/number_seven.png",
+        jpName: "nana",
+        enName: "Seven",
+        sound: "sounds/numbers/number_seven_sound.mp3"),
+    Number(
+        image: "assets/images/numbers/number_eight.png",
+        jpName: "hachi",
+        enName: "Eight",
+        sound: "sounds/numbers/number_eight_sound.mp3"),
+    Number(
+        image: "assets/images/numbers/number_nine.png",
+        jpName: "kyu",
+        enName: "Nine",
+        sound: "sounds/numbers/number_nine_sound.mp3"),
+    Number(
+        image: "assets/images/numbers/number_ten.png",
+        jpName: "ju",
+        enName: "Ten",
+        sound: "sounds/numbers/number_ten_sound.mp3"),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,56 +64,14 @@ class NumbersPage extends StatelessWidget {
         title: const Text("Numbers"),
         backgroundColor: const Color(0xff46322B),
       ),
-      body: Container(
-        height: 100,
-        color: const Color(0xffEF9235),
-        child: Row(
-          children: [
-            Container(
-              color: const Color(0xffFFF6DC),
-              child: Image.asset(
-                one.image,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    one.jpName,
-                    style: const TextStyle(fontSize: 18),
-                  ),
-                  Text(
-                    one.enName,
-                    style: const TextStyle(fontSize: 18),
-                  ),
-                ],
-              ),
-            ),
-            const Spacer(),
-            const Padding(
-              padding: EdgeInsets.only(right: 16.0),
-              child: Icon(
-                Icons.play_arrow,
-                size: 30,
-              ),
-            ),
-          ],
-        ),
+      body: ListView.builder(
+        itemCount: numbers.length,
+        itemBuilder: (context, index) {
+          return ListItem(
+            number: numbers[index],
+          );
+        },
       ),
     );
   }
-}
-
-class Number {
-  final String image;
-  final String jpName;
-  final String enName;
-
-  const Number({
-    required this.image,
-    required this.jpName,
-    required this.enName,
-  });
 }
