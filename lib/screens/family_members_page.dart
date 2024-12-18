@@ -69,7 +69,7 @@ class FamilyMembersPage extends StatelessWidget {
         itemBuilder: (context, index) {
           return ListItem(
             color: const Color(0xff558B37),
-            number: item[index],
+            item: item[index],
           );
         },
       ),

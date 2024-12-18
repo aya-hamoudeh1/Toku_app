@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../components/list_item.dart';
+import '../components/phrases_item.dart';
 import '../models/item.dart';
 
-class ColorsPage extends StatelessWidget {
-  const ColorsPage({super.key});
+class PhrasesPage extends StatelessWidget {
+  const PhrasesPage({super.key});
 
   final List<ItemModel> item = const [
     ItemModel(
@@ -51,14 +51,14 @@ class ColorsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Colors"),
+        title: const Text("Phrases"),
         backgroundColor: const Color(0xff46322B),
       ),
       body: ListView.builder(
         itemCount: item.length,
         itemBuilder: (context, index) {
-          return ListItem(
-            color: const Color(0xff79359F),
+          return PhrasesItem(
+            color: const Color(0xff50ADC7),
             item: item[index],
           );
         },
