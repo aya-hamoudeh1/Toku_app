@@ -1,6 +1,5 @@
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import '../models/item.dart';
+import '../models/item_model.dart';
 
 class ItemInfo extends StatelessWidget {
   const ItemInfo({super.key, required this.item});
@@ -32,10 +31,7 @@ class ItemInfo extends StatelessWidget {
         ),
         IconButton(
           onPressed: () {
-            final player = AudioPlayer();
-            player.play(
-              AssetSource(item.sound),
-            );
+            item.playSound();
           },
           icon: const Icon(
             Icons.play_arrow,

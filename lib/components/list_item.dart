@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:language_learning_app/models/item.dart';
-
+import 'package:language_learning_app/models/item_model.dart';
 import 'item_info.dart';
 
 class ListItem extends StatelessWidget {
@@ -29,5 +28,3 @@ class ListItem extends StatelessWidget {
     );
   }
 }
-
-

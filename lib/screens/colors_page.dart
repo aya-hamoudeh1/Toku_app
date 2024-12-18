@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../components/list_item.dart';
-import '../models/item.dart';
+import '../models/item_model.dart';
 
 class ColorsPage extends StatelessWidget {
   const ColorsPage({super.key});

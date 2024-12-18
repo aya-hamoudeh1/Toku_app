@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import '../models/item.dart';
+import '../models/item_model.dart';
 import 'item_info.dart';
 
 class PhrasesItem extends StatelessWidget {

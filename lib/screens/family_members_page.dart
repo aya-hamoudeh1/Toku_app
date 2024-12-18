@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../components/list_item.dart';
-import '../models/item.dart';
+import '../models/item_model.dart';
 
 class FamilyMembersPage extends StatelessWidget {
   const FamilyMembersPage({super.key});

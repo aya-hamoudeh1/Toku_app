@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 class Category extends StatelessWidget {
-  const Category({super.key, this.text, this.color,this.onTap});
+  const Category({super.key, this.text, this.color, this.onTap});
 
   final String? text;
   final Color? color;

@@ -17,4 +17,3 @@ class TokuApp extends StatelessWidget {
     );
   }
 }
-
